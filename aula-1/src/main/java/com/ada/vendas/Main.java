@@ -34,6 +34,27 @@ public class Main {
 
         // Chamando métodos
         listarVendasDoMesAtual(vendas);
+        calcularDiasDesdeVenda(vendas);
+        List<Venda> vendasAposData = buscarVendasAposData(vendas, LocalDate.now().minusDays(7));
+        for (Venda venda : vendasAposData) {
+            System.out.println(venda);
+        }
+        List<Venda> vendasEntreDatas = buscarVendasEntreDatas(vendas, LocalDate.now().minusDays(10), LocalDate.now());
+        for (Venda venda : vendasEntreDatas) {
+            System.out.println(venda);
+        }
+        double totalVendido = calcularTotalVendidoPeriodo(vendas, LocalDate.now().minusDays(10), LocalDate.now());
+        System.out.println(totalVendido);
+        Venda vendaMaisAntiga = buscarVendaMaisAntiga(vendas);
+        System.out.println(vendaMaisAntiga);
+        List<Venda> vendasUltimos7Dias = buscarVendasUltimos7Dias(vendas);
+        for (Venda venda : vendasUltimos7Dias) {
+            System.out.println(venda);
+        }
+        List<Venda> vendasAnoAtual = buscarVendasAnoAtual(vendas);
+        for (Venda venda : vendasAnoAtual) {
+            System.out.println(venda);
+        }
 
     }
 
