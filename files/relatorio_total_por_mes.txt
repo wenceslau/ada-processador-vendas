@@ -1,0 +1,6 @@
+Total vendido por mês
+MARCH -> 8390.0
+APRIL -> 7550.0
+JANUARY -> 8240.0
+MAY -> 12910.0
+FEBRUARY -> 7180.0

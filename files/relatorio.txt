@@ -1,0 +1,2 @@
+Total de vendas: 40
+Valor total vendido: 44270.0

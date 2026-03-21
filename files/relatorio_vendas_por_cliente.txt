@@ -1,0 +1,52 @@
+Cliente: Julia
+  6 - Julia - Monitor - 1 - 1200.0 - 2026-02-02
+  12 - Julia - Mouse - 1 - 120.0 - 2026-02-20
+  18 - Julia - Mesa - 1 - 900.0 - 2026-03-15
+  24 - Julia - Teclado - 1 - 200.0 - 2026-04-09
+  30 - Julia - Cadeira - 1 - 800.0 - 2026-05-03
+  36 - Julia - Notebook - 1 - 3500.0 - 2026-05-18
+
+Cliente: Joao
+  2 - Joao - Mouse - 2 - 120.0 - 2026-01-12
+  8 - Joao - Teclado - 2 - 200.0 - 2026-02-07
+  14 - Joao - Cadeira - 1 - 800.0 - 2026-03-05
+  20 - Joao - Monitor - 1 - 1200.0 - 2026-03-20
+  26 - Joao - Headset - 1 - 350.0 - 2026-04-15
+  32 - Joao - Mesa - 1 - 900.0 - 2026-05-08
+  38 - Joao - Teclado - 1 - 200.0 - 2026-05-22
+
+Cliente: Ana
+  3 - Ana - Teclado - 1 - 200.0 - 2026-01-15
+  9 - Ana - Mesa - 1 - 900.0 - 2026-02-10
+  15 - Ana - Notebook - 1 - 3500.0 - 2026-03-08
+  21 - Ana - Cadeira - 1 - 800.0 - 2026-04-02
+  27 - Ana - Monitor - 1 - 1200.0 - 2026-04-18
+  33 - Ana - Headset - 1 - 350.0 - 2026-05-10
+  39 - Ana - Mouse - 2 - 120.0 - 2026-05-25
+
+Cliente: Marcos
+  5 - Marcos - Notebook - 1 - 3500.0 - 2026-01-25
+  11 - Marcos - Headset - 2 - 350.0 - 2026-02-18
+  17 - Marcos - Teclado - 1 - 200.0 - 2026-03-12
+  23 - Marcos - Mouse - 2 - 120.0 - 2026-04-07
+  29 - Marcos - Notebook - 1 - 3500.0 - 2026-05-01
+  35 - Marcos - Mouse - 1 - 120.0 - 2026-05-15
+
+Cliente: Maria
+  1 - Maria - Notebook - 1 - 3500.0 - 2026-01-10
+  7 - Maria - Mouse - 3 - 120.0 - 2026-02-05
+  13 - Maria - Monitor - 1 - 1200.0 - 2026-03-01
+  19 - Maria - Headset - 1 - 350.0 - 2026-03-18
+  25 - Maria - Mesa - 1 - 900.0 - 2026-04-12
+  31 - Maria - Teclado - 2 - 200.0 - 2026-05-05
+  37 - Maria - Cadeira - 1 - 800.0 - 2026-05-20
+
+Cliente: Carlos
+  4 - Carlos - Cadeira - 1 - 800.0 - 2026-01-20
+  10 - Carlos - Notebook - 1 - 3500.0 - 2026-02-15
+  16 - Carlos - Mouse - 2 - 120.0 - 2026-03-10
+  22 - Carlos - Notebook - 1 - 3500.0 - 2026-04-04
+  28 - Carlos - Mouse - 3 - 120.0 - 2026-04-20
+  34 - Carlos - Monitor - 1 - 1200.0 - 2026-05-12
+  40 - Carlos - Mesa - 1 - 900.0 - 2026-05-28
+

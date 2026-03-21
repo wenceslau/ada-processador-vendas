@@ -1,0 +1,13 @@
+Vendas acima de 1000
+1 - Maria - Notebook - 1 - 3500.0 - 2026-01-10
+5 - Marcos - Notebook - 1 - 3500.0 - 2026-01-25
+6 - Julia - Monitor - 1 - 1200.0 - 2026-02-02
+10 - Carlos - Notebook - 1 - 3500.0 - 2026-02-15
+13 - Maria - Monitor - 1 - 1200.0 - 2026-03-01
+15 - Ana - Notebook - 1 - 3500.0 - 2026-03-08
+20 - Joao - Monitor - 1 - 1200.0 - 2026-03-20
+22 - Carlos - Notebook - 1 - 3500.0 - 2026-04-04
+27 - Ana - Monitor - 1 - 1200.0 - 2026-04-18
+29 - Marcos - Notebook - 1 - 3500.0 - 2026-05-01
+34 - Carlos - Monitor - 1 - 1200.0 - 2026-05-12
+36 - Julia - Notebook - 1 - 3500.0 - 2026-05-18

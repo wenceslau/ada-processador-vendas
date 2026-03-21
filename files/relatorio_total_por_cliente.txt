@@ -1,0 +1,7 @@
+Total vendido por cliente
+Julia -> 6720.0
+Joao -> 4090.0
+Ana -> 7190.0
+Marcos -> 8260.0
+Maria -> 7510.0
+Carlos -> 10500.0
