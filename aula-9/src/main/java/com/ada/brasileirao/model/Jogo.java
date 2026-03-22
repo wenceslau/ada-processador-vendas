@@ -2,11 +2,11 @@ package com.ada.brasileirao.model;
 
 public record Jogo(
         String id,
-        int ano,
+        Integer ano,
         String mandante,
         String visitante,
-        int golsMandante,
-        int golsVisitante,
+        Integer golsMandante,
+        Integer golsVisitante,
         String estado
 ) {
 }
