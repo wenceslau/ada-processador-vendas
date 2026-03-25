@@ -17,7 +17,7 @@ public class VendaService {
         System.out.printf("%s: Importacao dados de vendas\n", LocalTime.now());
 
         try {
-            var vendas = VendaFileReader.carregarVendas(arquivo);
+             var vendas = VendaFileReader.carregarVendas(arquivo);
 
             System.out.printf("%s: Importacao dados de vendas concluida\n", LocalTime.now());
 
@@ -28,7 +28,7 @@ public class VendaService {
         }
     }
 
-    public Map<Integer, Double> vendasPorMes(List<Venda> vendas,int ano) {
+    public Map<Integer, Double> vendasPorMes(List<Venda> vendas, int ano) {
 
         if (vendas == null){
             throw new RuntimeException("Nehuma venda foi importada");
@@ -98,6 +98,5 @@ public class VendaService {
             return 0;
         }
     }
-
 
 }

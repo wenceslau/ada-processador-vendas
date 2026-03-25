@@ -1,0 +1,3 @@
+Maria,Notebook,3500
+Joao,Mouse,120
+Ana,Cadeira,800

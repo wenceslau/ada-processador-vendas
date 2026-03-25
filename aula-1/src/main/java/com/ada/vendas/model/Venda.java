@@ -10,18 +10,18 @@ public class Venda {
     private Produto produto;
     private Integer quantidade;
     private Double valorUnitario;
-    private LocalDate dataVenda;
+    private LocalDate dataDaVenda;
 
     public Venda(Long id, Cliente cliente, Produto produto,
                  Integer quantidade, Double valorUnitario,
-                 LocalDate dataVenda) {
+                 LocalDate dataDaVenda) {
 
         this.id = id;
         this.cliente = cliente;
         this.produto = produto;
         this.quantidade = quantidade;
         this.valorUnitario = valorUnitario;
-        this.dataVenda = dataVenda;
+        this.dataDaVenda = dataDaVenda;
     }
 
     public Long getId() { return id; }
@@ -29,7 +29,7 @@ public class Venda {
     public Produto getProduto() { return produto; }
     public Integer getQuantidade() { return quantidade; }
     public Double getValorUnitario() { return valorUnitario; }
-    public LocalDate getDataVenda() { return dataVenda; }
+    public LocalDate getDataDaVenda() { return dataDaVenda; }
 
     public Double getValorTotal() {
         return quantidade * valorUnitario;
@@ -49,6 +49,6 @@ public class Venda {
 
     @Override
     public String toString() {
-        return id + " - " + cliente.getNome() + " - " + produto.getNome() + " - " + quantidade + " - " + valorUnitario + " - " + dataVenda;
+        return id + " - " + cliente.getNome() + " - " + produto.getNome() + " - " + quantidade + " - " + valorUnitario + " - " + dataDaVenda;
     }
 }

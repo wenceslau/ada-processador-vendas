@@ -63,7 +63,7 @@ public class Main {
         List<Venda> resultado = new ArrayList<>();
 
         for (Venda venda : vendas) {
-            if (venda.getDataVenda().isAfter(data)) {
+            if (venda.getDataDaVenda().isAfter(data)) {
                 resultado.add(venda);
             }
         }
@@ -76,7 +76,7 @@ public class Main {
         List<Venda> resultado = new ArrayList<>();
 
         for (Venda venda : vendas) {
-            LocalDate dataVenda = venda.getDataVenda();
+            LocalDate dataVenda = venda.getDataDaVenda();
 
             if ((dataVenda.isEqual(inicio) || dataVenda.isAfter(inicio)) &&
                 (dataVenda.isEqual(fim) || dataVenda.isBefore(fim))) {
@@ -93,11 +93,11 @@ public class Main {
         LocalDate hoje = LocalDate.now();
 
         for (Venda venda : vendas) {
-            if (venda.getDataVenda().getMonth() == hoje.getMonth()
-                && venda.getDataVenda().getYear() == hoje.getYear()) {
+            if (venda.getDataDaVenda().getMonth() == hoje.getMonth()
+                && venda.getDataDaVenda().getYear() == hoje.getYear()) {
 
                 System.out.println("Venda ID: " + venda.getId()
-                                   + " | Data: " + venda.getDataVenda()
+                                   + " | Data: " + venda.getDataDaVenda()
                                    + " | Total: " + venda.getValorTotal());
             }
         }
@@ -108,7 +108,7 @@ public class Main {
         LocalDate hoje = LocalDate.now();
 
         for (Venda venda : vendas) {
-            long dias = ChronoUnit.DAYS.between(venda.getDataVenda(), hoje);
+            long dias = ChronoUnit.DAYS.between(venda.getDataDaVenda(), hoje);
 
             System.out.println("Venda ID: " + venda.getId()
                                + " ocorreu há " + dias + " dias.");
@@ -137,7 +137,7 @@ public class Main {
         LocalDate seteDiasAtras = hoje.minusDays(7);
 
         for (Venda venda : vendas) {
-            LocalDate dataVenda = venda.getDataVenda();
+            LocalDate dataVenda = venda.getDataDaVenda();
 
             if ((dataVenda.isEqual(seteDiasAtras) || dataVenda.isAfter(seteDiasAtras))
                 && (dataVenda.isBefore(hoje) || dataVenda.isEqual(hoje))) {
@@ -155,7 +155,7 @@ public class Main {
         int anoAtual = LocalDate.now().getYear();
 
         for (Venda venda : vendas) {
-            if (venda.getDataVenda().getYear() == anoAtual) {
+            if (venda.getDataDaVenda().getYear() == anoAtual) {
                 resultado.add(venda);
             }
         }
@@ -168,7 +168,7 @@ public class Main {
         double total = 0.0;
 
         for (Venda venda : vendas) {
-            LocalDate dataVenda = venda.getDataVenda();
+            LocalDate dataVenda = venda.getDataDaVenda();
 
             if ((dataVenda.isEqual(inicio) || dataVenda.isAfter(inicio)) &&
                 (dataVenda.isEqual(fim) || dataVenda.isBefore(fim))) {
@@ -189,7 +189,7 @@ public class Main {
         Venda vendaMaisAntiga = vendas.get(0);
 
         for (Venda venda : vendas) {
-            if (venda.getDataVenda().isBefore(vendaMaisAntiga.getDataVenda())) {
+            if (venda.getDataDaVenda().isBefore(vendaMaisAntiga.getDataDaVenda())) {
                 vendaMaisAntiga = venda;
             }
         }

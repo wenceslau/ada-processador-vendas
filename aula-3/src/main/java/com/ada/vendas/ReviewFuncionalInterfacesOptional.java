@@ -20,8 +20,7 @@ public class ReviewFuncionalInterfacesOptional {
         //📌 2. Function<T, R>
         System.out.println("\nFunction:");
 
-        Function<String, Integer> tamanho =
-                texto -> texto.length();
+        Function<String, Integer> tamanho = texto -> texto.length();
 
         System.out.println("Tamanho: " + tamanho.apply("Java"));
 
@@ -29,8 +28,7 @@ public class ReviewFuncionalInterfacesOptional {
         //📌 3. Consumer<T>
         System.out.println("\nConsumer:");
 
-        Consumer<String> imprimir =
-                texto -> System.out.println("Texto: " + texto);
+        Consumer<String> imprimir = texto -> System.out.println("Texto: " + texto);
 
         imprimir.accept("Hello");
 
@@ -38,8 +36,7 @@ public class ReviewFuncionalInterfacesOptional {
         //📌 4. Supplier<T>
         System.out.println("\nSupplier:");
 
-        Supplier<Double> gerarNumero =
-                () -> Math.random();
+        Supplier<Double> gerarNumero = () -> Math.random();
 
         System.out.println("Número gerado: " + gerarNumero.get());
 

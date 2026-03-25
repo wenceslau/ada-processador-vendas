@@ -34,7 +34,7 @@ public class RelatorioService {
         });
 
         var dataHora = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
-        var nomeRelatorio = "relatorio_vendas_por_cliente_" + dataHora + ".txt";
+        var nomeRelatorio = "files/relatorio_vendas_por_cliente_" + dataHora + ".txt";
 
         return RelatorioWriter.escreverRelatorio(nomeRelatorio, relatorio);
 
@@ -61,7 +61,7 @@ public class RelatorioService {
         });
 
         var dataHora = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
-        var nomeRelatorio = "relatorio_vendas_por_mes_" + dataHora + ".txt";
+        var nomeRelatorio = "files/relatorio_vendas_por_mes_" + dataHora + ".txt";
 
         return RelatorioWriter.escreverRelatorio(nomeRelatorio, relatorio);
     }
@@ -87,7 +87,7 @@ public class RelatorioService {
         });
 
         var dataHora = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
-        var nomeRelatorio = "relatorio_vendas_por_categoria_" + dataHora + ".txt";
+        var nomeRelatorio = "files/relatorio_vendas_por_categoria_" + dataHora + ".txt";
 
         return RelatorioWriter.escreverRelatorio(nomeRelatorio, relatorio);
 

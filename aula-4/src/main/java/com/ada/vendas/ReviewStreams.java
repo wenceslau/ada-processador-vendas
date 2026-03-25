@@ -95,6 +95,11 @@ public class ReviewStreams {
                 System.out.println(cliente + " -> " + valor)
         );
 
+        /*
+            NomeCliente | ValorTotalVenda | QuantidadeProdutosVendidos
+            Ana         |   10000.00      |   35
+         */
+
         /*------------------------------------------------------------------------------------------------*/
         //📌 9. distinct()
         System.out.println("\nCategorias únicas:");

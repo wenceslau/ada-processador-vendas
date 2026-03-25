@@ -4,6 +4,7 @@ import com.ada.vendas.model.Venda;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,7 +63,14 @@ public class ReviewJavaTime {
 
         System.out.println(periodo.getYears());
         System.out.println(periodo.getMonths());
-        System.out.println(periodo.getDays());
+
+        System.out.println("Dias entre usando Period: " + periodo.getDays()); // Dias entre usando Period: 22
+        System.out.println("Dias entre usdando ChronoUnit: " + ChronoUnit.DAYS.between(inicio, fim)); //Dias entre usdando ChronoUnit: 81
+
+
+        System.out.println(ChronoUnit.MONTHS.between(inicio, fim));
+        System.out.println(ChronoUnit.YEARS.between(inicio, fim));
+
         /*------------------------------------------------------------------------------------------------*/
 
         //📌 7. Trabalhando com Duration (tempo)
@@ -106,7 +114,7 @@ public class ReviewJavaTime {
         //📌 11. Exemplo aplicado ao projeto (vendas)
         List<Venda> vendas = new ArrayList<>();
         vendas.stream()
-                .filter(v -> v.getDataVenda().isAfter(LocalDate.of(2026, 1, 1)))
+                .filter(v -> v.getDataDaVenda().isAfter(LocalDate.of(2026, 1, 1)))
                 .forEach(System.out::println);
     }
 

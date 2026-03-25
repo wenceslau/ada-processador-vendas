@@ -16,7 +16,6 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-
         GeradorVendasCSV.gerarArquivo("files/vendas_grandes.csv", 5);
         List<Venda> vendas = VendaFileReader.carregarVendas("files/vendas_grandes.csv");
 
@@ -141,6 +140,8 @@ public class Main {
 
         todas.join();
 
+        exercicio1();
+
     }
 
     public static void calcularCashback(List<Venda> venda) {
@@ -185,6 +186,60 @@ public class Main {
             return 0;
         }
     }
+
+    public static void exercicio1() throws IOException {
+
+        GeradorVendasCSV.gerarArquivo("files/vendas_grandes.csv", 5);
+        List<Venda> vendas = VendaFileReader.carregarVendas("files/vendas_grandes.csv");
+
+        // vendas caras
+        CompletableFuture<List<Venda>> vendasCarasFuture =
+                CompletableFuture.supplyAsync(() -> vendas.stream().filter(
+                        v -> v.getValorTotal() > 2000
+                ).toList());
+
+        //vendas por mes
+        CompletableFuture<Map<Integer, Double>> totalPorMesFuture =
+                CompletableFuture.supplyAsync(() -> vendas.stream().collect(Collectors.groupingBy(
+                        v -> v.getDataVenda().getMonthValue(),
+                        Collectors.summingDouble(Venda::getValorTotal)
+                )));
+
+        //vendas por cliente
+        CompletableFuture<Map<String, List<Venda>>> vendasPorClienteFuture =
+                CompletableFuture.supplyAsync(() -> vendas.stream().collect(Collectors.groupingBy(
+                        v -> v.getCliente().getNome()
+                )));
+
+        CompletableFuture<Void> todas =
+                CompletableFuture.allOf(
+                        vendasCarasFuture,
+                        totalPorMesFuture,
+                        vendasPorClienteFuture
+                );
+
+        todas.thenRun(() -> {
+            System.out.println("Resultados");
+
+            List<Venda> vendasCaras = vendasCarasFuture.join();
+            Map<Integer, Double> totalPorMes = totalPorMesFuture.join();
+            Map<String, List<Venda>> vendasPorCliente = vendasPorClienteFuture.join();
+
+            System.out.println("Vendas caras");
+            vendasCaras.forEach(System.out::println);
+
+            System.out.println("Total por mes");
+            totalPorMes.forEach((mes, total) -> System.out.println(mes + " -> " + total));
+
+            System.out.println("Vendas por cliente");
+            vendasPorCliente.forEach((cliente, lista) -> {
+                System.out.println("Cliente: " + cliente);
+                lista.forEach(System.out::println);
+            });
+
+        }).join();
+
+
 
     /*
 
@@ -256,8 +311,6 @@ public class Main {
             coordenar tarefas com allOf
 
      */
-
-    public static void exercicios(List<Venda> vendas) {
 
     }
 }

@@ -45,6 +45,7 @@ public class ReviewFuncional {
         //📌 4. Passando comportamento como parâmetro
         System.out.println("\nMétodo genérico com Predicate:");
 
+
         filtrarVendas(vendas, v -> v.getValorTotal() > 1000);
 
         /*------------------------------------------------------------------------------------------------*/

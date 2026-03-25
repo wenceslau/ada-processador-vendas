@@ -15,10 +15,11 @@ public class App {
 
     public static void main(String[] args) {
 
-        String arquivoVendas = "files/vendas_aula_8.csv";
+        String arquivoVendas = caminhoArquivoVendas();
         Scanner scanner = new Scanner(System.in);
         VendaService vendaService = new VendaService();
         RelatorioService relatorioService = new RelatorioService();
+
 
         while (true) {
             System.out.println("_______________________________________________");
@@ -52,13 +53,18 @@ public class App {
 
     }
 
+    private static String caminhoArquivoVendas() {
+        String arquivoVendas = "files/vendas_aula_8.csv";
+        return arquivoVendas;
+    }
+
     private static void vendasPorMes(VendaService vendaService) {
         int ano = 2026;
-        Map<Integer, Double> dados;
-        dados = vendaService.vendasPorMes(vendas, ano);
+        Map<Integer, Double>
+                dados = vendaService.vendasPorMes(vendas, ano);
 
 
-        System.out.println("Total de vendas ano "+ano+" por mês");
+        System.out.println("Total de vendas ano " + ano + " por mês");
         System.out.println("| Mês   Total\t|");
         dados.forEach((mes, total) ->
                 System.out.println("| " + mes + "   " + total + "   |")

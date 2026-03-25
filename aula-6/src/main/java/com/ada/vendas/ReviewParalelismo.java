@@ -45,7 +45,6 @@ public class ReviewParalelismo {
         Thread thread = new Thread(() ->
                 System.out.println("Executando em: " + Thread.currentThread().getName())
         );
-
         thread.start();
 
         /*------------------------------------------------------------------------------------------------*/

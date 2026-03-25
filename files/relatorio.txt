@@ -1,2 +1,3 @@
-Total de vendas: 40
-Valor total vendido: 44270.0
+Cliente: Maria - Valor: 3500
+Cliente: Joao - Valor: 120
+Cliente: Ana - Valor: 800
